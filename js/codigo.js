@@ -1,3 +1,15 @@
+$(function(){
+  $('button#confirmarCompra').on('click', confirmarCompra);
+  $('button#borrarCompra').on('click', borrarCompra);
+
+
+  function borrarCompra(){
+    alert("Compra Borrada");
+  }
+  function confirmarCompra(){
+    alert("Compra Confirmada");
+  }
+});
 var video = document.querySelector("#videoElement");
 
 
