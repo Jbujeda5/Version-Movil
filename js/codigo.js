@@ -10,4 +10,4 @@ navigator.mediaDevices.getUserMedia({
     })
     .catch(function (error) {
         console.log('error:' + error);
-    })
+    });
