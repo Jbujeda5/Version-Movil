@@ -10,6 +10,14 @@
   border: solid, 2px, black;
 }
 
+#botonesReservas{
+  text-align: center;
+}
+
+td{
+  text-align: center;
+}
+
 .nav-tabs{
     font-family: 'VT323', monospace;
     font-size: 125%;
