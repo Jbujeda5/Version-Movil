@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -53,13 +53,13 @@
                     <li class="active"><a href="#">Inicio <span class="sr-only">(current)</span></a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Agenda</a></li>
+                    <li><a href="#">Agenda</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Noticias</a></li>
+                    <li><a href="#">Noticias</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Ofertas</a></li>
+                    <li><a href="#">Ofertas</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -79,10 +79,23 @@
             <div id="pedidos" class="tab-pane fade in active">
                 <h2>Pedidos</h2>
 
-                <video autoplay="true" id="videoElement"></video>
+                <div id="codigo">
+                    <img id="codigo" src="img/qr.jpg">
+                </div>
 
-                <p>Aqui iran los pedidos</p>
+                <div id="menu">
+                    <div id="comida" class="col col-xs-3 bg-primary">
+                        <p class="nav-tabs">Comida</p>
+                    </div>
+                    <div id="bebida" class="col col-xs-offset-1 col-xs-3 bg-primary">
+                        <p class="nav-tabs">Bebida</p>
+                    </div>
+                    <div id="juegos" class="col col-xs-offset-1 col-xs-3  bg-primary">
+                        <p class="nav-tabs">Juegos</p>
+                    </div>
+                </div>
             </div>
+
             <div id="reservas" class="tab-pane fade">
                 <h2>Reservas</h2>
                 <p>Aqui iran las reservas</p>
@@ -93,6 +106,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
