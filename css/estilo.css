@@ -4,27 +4,48 @@
     margin-top: 15%;
 }
 
-#pedido > div{
-  text-align: center;
-  font-family: 'VT323', monospace;
-  border: solid, 2px, black;
-}
-
-#botonesReservas{
-  text-align: center;
-}
-
-td{
-  text-align: center;
-}
-
-.nav-tabs{
+.nav-tabs {
     font-family: 'VT323', monospace;
     font-size: 125%;
+    color: black;
 }
 
 h2 {
     text-align: center;
     font-size: 200%;
     font-family: 'Press Start 2P', cursive;
+}
+
+#codigo {
+    //display: none;
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#codigoqr {
+    margin-left: 2.5%;
+    border-top: 7px dashed #000000;
+    border-right: 7px dashed #000000;
+    border-bottom: 7px dashed #000000;
+    border-left: 7px dashed #000000;
+}
+
+.optmenu {
+    display: none;
+    margin-top: 5%;
+}
+
+.imgMenu {
+    margin-left: 20%;
+    width: 75px;
+    height: 75px;
+}
+
+#botonesReservas {
+    text-align: center;
+}
+
+td {
+    text-align: center;
 }
