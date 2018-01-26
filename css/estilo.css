@@ -93,3 +93,9 @@ h2#tituloFavoritos {
 td {
   text-align: center;
 }
+
+#confirmarCompraAlert{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}

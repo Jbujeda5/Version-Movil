@@ -131,58 +131,66 @@
             </div>
 
 
-            <!-- Zona donde poder ver tus reservas -->
-            <div id="reservas" class="tab-pane fade">
-                <h2>Reservas</h2>
+      <!-- Zona donde poder ver tus reservas -->
+      <div id="reservas" class="tab-pane fade">
+        <h2>Reservas</h2>
 
-                <table class="table-striped table-condensed table-responsive">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Nombre</th>
-                            <th>Cantidad</th>
-                            <th>Mesa</th>
-                            <th>Precio €</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Nashor</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>3.50</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Coca-Cola</td>
-                            <td>2</td>
-                            <td>10</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Mercy</td>
-                            <td>1</td>
-                            <td>10</td>
-                            <td>3.50</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>Total</td>
-                            <td>10</td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <div id="botonesReservas">
-                    <button type="button" id="confirmarCompra" class="btn btn-lg btn-success btn-responsive"><i class="fas fa-check"></i>Comprar</button>
-                    <button type="button" id="borrarCompra" class="btn btn-lg btn-danger btn-responsive"><i class="fas fa-trash-alt"></i>Cancelar</button>
-                </div>
-            </div>
+        <!-- Alerts de las reservas -->
+        <div class="alert" role="alert" id="confirmarCompraAlert">
+          <p><strong>¿Seguro que desea realizar la compra?</strong></p>
+          <br>
+          <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompra"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+          <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompra"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+        </div>
+        <!-- Tabla con los articulos guardados en el carrito -->
+        <table class="table-striped table-condensed table-responsive">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Cantidad</th>
+              <th>Mesa</th>
+              <th>Precio €</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Nashor</td>
+              <td>1</td>
+              <td>10</td>
+              <td>3.50</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Coca-Cola</td>
+              <td>2</td>
+              <td>10</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Mercy</td>
+              <td>1</td>
+              <td>10</td>
+              <td>3.50</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Total</td>
+              <td>10</td>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- Botones de Confirmar Compra -->
+        <div id="botonesReservas">
+          <button type="button" id="confirmarCompra" class="btn btn-lg btn-success btn-responsive"><i class="fas fa-check"></i>Comprar</button>
+        </div>
+      </div>
 
             <!-- Apartado de pedidos favoritos -->
             <div id="favoritos" class="tab-pane fade">

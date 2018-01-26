@@ -8,12 +8,20 @@ $(function() {
   $('#menuFavIncorrecto').on('click', mostrarIncorrectoPedidoFav);
   $('#cerrarFavCorrecto').on('click', cerrarCorrectoPedidoFav);
   $('#cerrarFavIncorrecto').on('click', cerrarIncorrectoPedidoFav);
+  $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
+  $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
+  $('#botonDenegarCompra').on('click', cerrarAlertConfirmarCompra);
 
 
 
   $(".alert").hide();
 
 
+function cerrarAlertConfirmarCompra(){
+  $('div#confirmarCompraAlert').slideUp();
+  $('button#confirmarCompra').removeAttr("disabled");
+
+}
 
   function cerrarIncorrectoPedidoFav() {
     $("div#falloPedidoFav").slideUp();
@@ -37,6 +45,11 @@ $(function() {
     $("div#falloPedidoFav").slideDown();
     $("#containerFav").children().attr("disabled", "true");
     $("div#anyadirFav").children().attr("disabled", "true");
+  }
+
+  function mostrarAlertConfirmarCompra(){
+    $('div#confirmarCompraAlert').slideDown();
+    $('button#confirmarCompra').attr("disabled", "true");
   }
 
 });
