@@ -1,32 +1,42 @@
+$(function() {
 
-$(function(){
+  // $("#confirmarCompra").click(abrir);
 
-  $("#confirmarCompra").click(abrir);
+  // $('button#borrarCompra').on('click', borrarCompra);
 
-  $('button#borrarCompra').on('click', borrarCompra);
+  $('#menuFavCorrecto').on('click', mostrarCorrectoPedidoFav);
+  $('#menuFavIncorrecto').on('click', mostrarIncorrectoPedidoFav);
+  $('#cerrarFavCorrecto').on('click', cerrarCorrectoPedidoFav);
+  $('#cerrarFavIncorrecto').on('click', cerrarIncorrectoPedidoFav);
 
 
-  function borrarCompra(){
-      $('#dialog').dialog();
+
+  $(".alert").hide();
+
+
+
+  function cerrarIncorrectoPedidoFav() {
+    $("div#falloPedidoFav").slideUp();
+    $("#containerFav").children().removeAttr("disabled");
+    $("div#anyadirFav").children().removeAttr("disabled");
   }
 
-  $("#dialog").hide();
+  function cerrarCorrectoPedidoFav() {
+    $("div#correctoPedidoFav").slideUp();
+    $("#containerFav").children().removeAttr("disabled");
+    $("div#anyadirFav").children().removeAttr("disabled");
+  }
 
-    function abrir() {
+  function mostrarCorrectoPedidoFav() {
+    $("div#correctoPedidoFav").slideDown();
+    $("#containerFav").children().attr("disabled", "true");
+    $("div#anyadirFav").children().attr("disabled", "true");
+  }
 
-		$("#dialog").show();
-
-    $( "#dialog" ).dialog({
-      dialogClass: "no-close",
-      buttons: [
-        {
-          text: "OK",
-          click: function() {
-            $( this ).dialog( "close" );
-          }
-        }
-      ]
-    });
-	}
+  function mostrarIncorrectoPedidoFav() {
+    $("div#falloPedidoFav").slideDown();
+    $("#containerFav").children().attr("disabled", "true");
+    $("div#anyadirFav").children().attr("disabled", "true");
+  }
 
 });
