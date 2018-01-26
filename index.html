@@ -98,6 +98,35 @@
                         <img class="imgMenu" src="img/juegos.png">
                     </div>
 
+                    <div class="menuComida">
+
+                        <h3>Comida</h3>
+
+                        <div class="row">
+                            <div class="optComida col col-xs-6">
+                                <p id="entrantes">Entrantes</p>
+                                <img class="imgMenuComida" src="/img/entrante.jpg" alt="Entrantes">
+                            </div>
+                            <div class="optComida col col-xs-5">
+                                <p id="hamburguesa">Hamburguesa</p>
+                                <img class="imgMenuComida" src="/img/hamburguesa.jpg" alt="Entrantes">
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="row">
+                            <div class="optComida col col-xs-6">
+                                <p id="bocadillo">Bocadillo</p>
+                                <img class="imgMenuComida" src="/img/bocadillo.jpg" alt="Entrantes">
+                            </div>
+                            <div class="optComida col col-xs-5">
+                                <p id="sandwich">Sandwich</p>
+                                <img class="imgMenuComida" src="/img/sandwich.jpg" alt="Entrantes">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -157,41 +186,41 @@
 
             <!-- Apartado de pedidos favoritos -->
             <div id="favoritos" class="tab-pane fade">
-              <h2 id="tituloFavoritos">Lo de Siempre</h2>
-              <div class="container" id="containerFav">
-                <!-- Alerts -->
-                <div class="alerts">
-                  <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
-                    <p>No se puede realizar el pedido.</p>
-                    <strong>Motivos:</strong>
-                    <ul>
-                      <li>Faltan ingredientes</li>
-                      <li>Falta dinero en la cuenta</li>
-                    </ul>
-                    <button type="button" class="btn btn-danger btn-xs" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
-                  </div>
-                  <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
-                    <p>Pedido Realizado</p>
-                    <strong>Resumen del Pedido:</strong>
-                    <ul>
-                      <li>Cerveza x 1</li>
-                    </ul>
-                    <strong>Precio: 1.50€</strong>
-                    <br>
-                    <button type="button" class="btn btn-success btn-xs" id="cerrarFavCorrecto"><i class="glyphicon glyphicon-ok"></i></button>
-                  </div>
-                </div>
-                <!-- Fin Alerts -->
+                <h2 id="tituloFavoritos">Lo de Siempre</h2>
+                <div class="container" id="containerFav">
+                    <!-- Alerts -->
+                    <div class="alerts">
+                        <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
+                            <p>No se puede realizar el pedido.</p>
+                            <strong>Motivos:</strong>
+                            <ul>
+                                <li>Faltan ingredientes</li>
+                                <li>Falta dinero en la cuenta</li>
+                            </ul>
+                            <button type="button" class="btn btn-danger btn-xs" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
+                            <p>Pedido Realizado</p>
+                            <strong>Resumen del Pedido:</strong>
+                            <ul>
+                                <li>Cerveza x 1</li>
+                            </ul>
+                            <strong>Precio: 1.50€</strong>
+                            <br>
+                            <button type="button" class="btn btn-success btn-xs" id="cerrarFavCorrecto"><i class="glyphicon glyphicon-ok"></i></button>
+                        </div>
+                    </div>
+                    <!-- Fin Alerts -->
 
-                <!-- Menús creados por el usuario -->
-                <button type="button" class="btn btn-block btn-danger" id="menuFavIncorrecto">Noche de Martes</button>
-                <button type="button" class="btn btn-block btn-success" id="menuFavCorrecto">CERVEZA!!!</button>
+                    <!-- Menús creados por el usuario -->
+                    <button type="button" class="btn btn-block btn-danger" id="menuFavIncorrecto">Noche de Martes</button>
+                    <button type="button" class="btn btn-block btn-success" id="menuFavCorrecto">CERVEZA!!!</button>
 
-                <!-- Boton de añadir nuevos menús predefinidos -->
-                <div class="container" id="anyadirFav">
-                  <button type="button" class="btn  btn-circle btn-lg pull-right btn-dark"><i class="glyphicon glyphicon-plus"></i></button>
+                    <!-- Boton de añadir nuevos menús predefinidos -->
+                    <div class="container" id="anyadirFav">
+                        <button type="button" class="btn  btn-circle btn-lg pull-right btn-dark"><i class="glyphicon glyphicon-plus"></i></button>
+                    </div>
                 </div>
-              </div>
 
             </div>
         </div>
