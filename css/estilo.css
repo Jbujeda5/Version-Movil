@@ -39,7 +39,6 @@ h2#tituloFavoritos {
 
 #codigo {
   display: none;
-
   margin-top: 5%;
   text-align: center;
   font-family: 'Press Start 2P', cursive;
@@ -55,7 +54,6 @@ h2#tituloFavoritos {
 
 .optmenu {
   display: none;
-
   margin-top: 5%;
 }
 
@@ -64,20 +62,18 @@ h2#tituloFavoritos {
   width: 75px;
   height: 75px;
 }
+
 .menuComida {
   //display: none;
-
   margin-top: 5%;
 }
 
 #hamburguesa {
-    margin-left: 27%;
+  margin-left: 27%;
 }
 
-#entrantes,
-#bocadillo,
-#sandwich{
-   margin-left: 35%;
+#entrantes, #bocadillo, #sandwich {
+  margin-left: 35%;
 }
 
 .imgMenuComida {
@@ -94,21 +90,15 @@ td {
   text-align: center;
 }
 
-#confirmarCompraAlert{
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-}
-
-#cerrarFavIncorrecto{
+#cerrarFavIncorrecto {
   float: right;
 }
 
-#cerrarFavCorrecto{
-float: right;
+#cerrarFavCorrecto {
+  float: right;
 }
 
-#confirmarCompraFavAlert{
+.confirmacionesAlerts {
   background-color: #333;
   color: #fff;
   text-align: center;
