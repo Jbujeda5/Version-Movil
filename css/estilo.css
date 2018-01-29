@@ -99,3 +99,17 @@ td {
   color: #fff;
   text-align: center;
 }
+
+#cerrarFavIncorrecto{
+  float: right;
+}
+
+#cerrarFavCorrecto{
+float: right;
+}
+
+#confirmarCompraFavAlert{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
