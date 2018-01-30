@@ -1,105 +1,124 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P|VT323');
 .container {
-  margin-top: 15%;
+    margin-top: 15%;
 }
 
 .nav-tabs {
-  font-family: 'VT323', monospace;
-  font-size: 125%;
-  color: black;
+    font-family: 'VT323', monospace;
+    font-size: 125%;
+    color: black;
 }
 
 h2 {
-  text-align: center;
-  font-size: 200%;
-  font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Press Start 2P', cursive;
 }
 
 h3 {
-  text-align: center;
-  font-size: 300%;
-  font-family: 'VT323', monospace;
+    text-align: center;
+    font-size: 300%;
+    font-family: 'VT323', monospace;
 }
 
 h2#tituloFavoritos {
-  font-size: 150%;
+    font-size: 150%;
 }
 
 .btn-circle {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  padding: 6px 0;
-  font-size: 12px;
-  line-height: 1.428571429;
-  border-radius: 15px;
-  background-color: #333;
-  color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
 }
 
 #codigo {
-  display: none;
-  margin-top: 5%;
-  text-align: center;
-  font-family: 'Press Start 2P', cursive;
+    display: none;
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
 
 #codigoqr {
-  margin-left: 2.5%;
-  border-top: 7px dashed #000000;
-  border-right: 7px dashed #000000;
-  border-bottom: 7px dashed #000000;
-  border-left: 7px dashed #000000;
+    margin-left: 2.5%;
+    border-top: 7px dashed #000000;
+    border-right: 7px dashed #000000;
+    border-bottom: 7px dashed #000000;
+    border-left: 7px dashed #000000;
 }
 
 .optmenu {
-  display: none;
-  margin-top: 5%;
+    display: none;
+    margin-top: 5%;
 }
 
 .imgMenu {
-  margin-left: 20%;
-  width: 75px;
-  height: 75px;
+    margin-left: 20%;
+    width: 75px;
+    height: 75px;
 }
 
 .menuComida {
-  //display: none;
-  margin-top: 5%;
+    //display: none;
+    margin-top: 5%;
 }
 
 #hamburguesa {
-  margin-left: 27%;
+    margin-left: 27%;
 }
 
-#entrantes, #bocadillo, #sandwich {
-  margin-left: 35%;
+#entrantes,
+#bocadillo,
+#sandwich {
+    margin-left: 35%;
 }
 
 .imgMenuComida {
-  margin-left: 20%;
-  width: 100px;
-  height: 100px;
+    margin-left: 20%;
+    width: 100px;
+    height: 100px;
 }
 
 #botonesReservas {
-  text-align: center;
+    text-align: center;
 }
 
 td {
-  text-align: center;
+    text-align: center;
 }
 
 #cerrarFavIncorrecto {
-  float: right;
+    float: right;
 }
 
 #cerrarFavCorrecto {
-  float: right;
+    float: right;
 }
 
 .confirmacionesAlerts {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
 }
+
+
+/*Estilo para la pagina de errores*/
+.error-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.error-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.error-actions .btn {
+    margin-right: 10px;
+}
+/*********************************/
