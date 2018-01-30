@@ -68,20 +68,26 @@ h2#tituloFavoritos {
     margin-top: 5%;
 }
 
-#hamburguesa {
-    margin-left: 27%;
+.optComida {
+    background-color: #ACA3A8;
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 5px solid white;
 }
 
 #entrantes,
+#hamburguesa,
 #bocadillo,
 #sandwich {
-    margin-left: 35%;
+    text-align: center;
 }
 
 .imgMenuComida {
-    margin-left: 20%;
+    margin-left: 15%;
     width: 100px;
     height: 100px;
+    padding-bottom: 10px;
 }
 
 #botonesReservas {
@@ -108,6 +114,7 @@ td {
 
 
 /*Estilo para la pagina de errores*/
+
 .error-template {
     padding: 40px 15px;
     text-align: center;
@@ -121,4 +128,5 @@ td {
 .error-actions .btn {
     margin-right: 10px;
 }
+
 /*********************************/
