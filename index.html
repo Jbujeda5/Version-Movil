@@ -42,7 +42,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#">Bar</a>
+        <a class="navbar-brand" id="iconoBar" href="#paginaInicial">Bar</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +60,7 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <div class="container">
+  <div class="container" id="zonaPedidos">
 
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#pedidos">Pedidos</a></li>
@@ -72,8 +72,6 @@
 
       <!--Pestaña del tab donde se podra hacer el pedido de la mesa-->
       <div id="pedidos" class="tab-pane fade in active">
-
-        <h2>Pedidos</h2>
 
         <!--Div donde se leera el codigo QR de la mesa para poder hacer el pedido-->
         <div id="codigo">
@@ -131,7 +129,6 @@
 
       <!-- Zona donde poder ver tus reservas -->
       <div id="reservas" class="tab-pane fade">
-        <h2>Reservas</h2>
 
         <!-- Alerts de las reservas -->
         <div class="alert confirmacionesAlerts" role="alert" id="confirmarCompraAlert">
@@ -140,6 +137,7 @@
           <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompra"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
           <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompra"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
         </div>
+        <!-- Fin Alerts de las reservas -->
         <!-- Tabla con los articulos guardados en el carrito -->
         <table class="table-striped table-condensed table-responsive">
           <thead>
@@ -192,7 +190,6 @@
 
       <!-- Apartado de pedidos favoritos -->
       <div id="favoritos" class="tab-pane fade">
-        <h2 id="tituloFavoritos">Lo de Siempre</h2>
         <div class="container" id="containerFav">
           <!-- Alerts -->
           <div class="alerts">
@@ -212,7 +209,7 @@
               <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompraFav"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
             </div>
             <div class="alert confirmacionesAlerts" role="alert" id="alertAnyadirNuevoMenuFav">
-              <p><strong>¿Desea añadir un nuevo menú favorito"?</strong></p>
+              <p><strong>¿Desea añadir un nuevo menú favorito?</strong></p>
               <br>
               <button type="button" class="btn btn-success btn-sm" id="confirmarAnyadirMenú"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
               <button type="button" class="btn btn-danger btn-sm" id="denegarAnyadirMenú"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
@@ -243,7 +240,9 @@
       </div>
     </div>
   </div>
-
+  <div class="container" id="paginaInicial">
+    <h1>Bienvenidos</h1>
+  </div>
 </body>
 
 </html>

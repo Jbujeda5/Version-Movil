@@ -1,4 +1,10 @@
 $(function() {
+
+
+  // Zona Inicial
+  $('#codigoqr').on('click', ocultarQR);
+  $('#iconoBar').on('click', irInicio);
+
   // Zona Reservas
   $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
   $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
@@ -21,6 +27,22 @@ $(function() {
 
 
   $(".alert").hide();
+  $('div#menu').hide();
+  $('div#paginaInicial').hide();
+
+  function irInicio(){
+    $('#zonaPedidos').hide(500);
+    $('#paginaInicial').show(500);
+  }
+
+  function mostrarMensaje(){
+    console.log("Buenos días");
+  }
+
+  function ocultarQR(){
+    $('#codigo').hide(500);
+    $('div#menu').show(500);
+  }
 
   function cerrarAlertAnyadirFav() {
     $('div#alertAnyadirNuevoMenuFav').slideUp();
