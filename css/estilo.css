@@ -117,6 +117,9 @@ td {
 #cerrarFavCorrecto {
     float: right;
 }
+#cerrarCompraCorrecto {
+    float: right;
+}
 
 .confirmacionesAlerts {
     background-color: #333;

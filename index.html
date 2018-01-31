@@ -138,6 +138,16 @@
           <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompra"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
           <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompra"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
         </div>
+        <div class="alert alert-success alert-dismissible" role="alert" id="confirmarcompraRealizada">
+          <button type="button" class="btn btn-success btn-xs btn-circle" id="cerrarCompraCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+          <p>Pedido Realizado</p>
+          <strong>Resumen del Pedido:</strong>
+          <ul>
+            <li>Bocadillo x 1</li>
+          </ul>
+          <strong>Precio: 3.50€</strong>
+          <br>
+        </div>
         <!-- Fin Alerts de las reservas -->
         <!-- Tabla con los articulos guardados en el carrito -->
         <table class="table-striped table-condensed table-responsive">
@@ -153,21 +163,7 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>Nashor</td>
-              <td>1</td>
-              <td>10</td>
-              <td>3.50</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Coca-Cola</td>
-              <td>2</td>
-              <td>10</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Mercy</td>
+              <td>Bocadillo</td>
               <td>1</td>
               <td>10</td>
               <td>3.50</td>
@@ -179,7 +175,7 @@
               <td></td>
               <td></td>
               <td>Total</td>
-              <td>10</td>
+              <td>3.50</td>
             </tr>
           </tfoot>
         </table>

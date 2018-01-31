@@ -11,6 +11,7 @@ $(function() {
   $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
   $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
   $('#botonDenegarCompra').on('click', cerrarAlertConfirmarCompra);
+  $('#cerrarCompraCorrecto').on('click', cerrarAlertConfirmarCompraReservada);
 
   // Zona Favoritos Menús
   $('#botonConfirmarCompraFav').on('click', confirmarAlertConfirmarCompraFav);
@@ -55,6 +56,11 @@ $(function() {
     $('div#menu').show(500);
   }
 
+  function cerrarAlertConfirmarCompraReservada() {
+    $('div#confirmarcompraRealizada').slideUp();
+    $('button#confirmarCompra').removeAttr("disabled");
+  }
+
   function cerrarAlertAnyadirFav() {
     $('div#alertAnyadirNuevoMenuFav').slideUp();
     $("#containerFav").children().removeAttr("disabled");
@@ -70,7 +76,7 @@ $(function() {
 
   function cerrarAlertConfirmarCompra() {
     $('div#confirmarCompraAlert').slideUp();
-    $('button#confirmarCompra').removeAttr("disabled");
+    $('div#confirmarcompraRealizada').slideDown();
   }
 
   function confirmarAlertConfirmarCompraFav() {
