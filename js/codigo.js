@@ -4,6 +4,8 @@ $(function() {
   // Zona Inicial
   $('#codigoqr').on('click', ocultarQR);
   $('#iconoBar').on('click', irInicio);
+  $('a#iraInicio').on('click', irInicio);
+  $('a#iraPedidos').on('click', irZonaPedidos);
 
   // Zona Reservas
   $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
@@ -23,18 +25,27 @@ $(function() {
   $('#confirmarAnyadirMenú').on('click', cerrarAlertAnyadirFav);
   $('#denegarAnyadirMenú').on('click', cerrarAlertAnyadirFav);
 
-
-
-
+  // Ocultando elementos
   $(".alert").hide();
   $('div#menu').hide();
   $('div#paginaInicial').hide();
 
+  // Funciones de movilidad por la barra de navegación
   function irInicio(){
+    $("#bs-example-navbar-collapse-1").removeClass('in open');
     $('#zonaPedidos').hide(500);
     $('#paginaInicial').show(500);
   }
 
+  function irZonaPedidos(){
+    console.log("Hola");
+    $("#bs-example-navbar-collapse-1").removeClass('in open');
+    $('#zonaPedidos').show(500);
+    $('#paginaInicial').hide(500);
+  }
+
+
+  // Funcionalidades
   function mostrarMensaje(){
     console.log("Buenos días");
   }
