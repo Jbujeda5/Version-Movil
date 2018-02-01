@@ -82,6 +82,8 @@ h2#tituloFavoritos {
 
 .optComida {
     background-color: #ACA3A8;
+    /* background-color: #333; */
+    /* color: #fff; */
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
@@ -149,3 +151,5 @@ td {
 }
 
 /*********************************/
+
+/* Estilo página iniciar */
