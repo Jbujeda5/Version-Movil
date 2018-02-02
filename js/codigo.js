@@ -22,6 +22,7 @@ $(function() {
   $('#juegos').on('click', moverJuego);
   $('#irBocadillo').on('click', moverBocadillo);
   $('#bocadilloSerrano').on('click', moverSeleccion);
+  $('#risk').on('click', moverSeleccion);
 
   // Zona Reservas
   $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
@@ -48,7 +49,8 @@ $(function() {
   $('div#menu').hide();
   $('div#zonaPedidos').hide();
   // $('div#menuEntrantes').hide();
-  // $('div#menuComida').hide();
+  $('div#zonaComida').hide();
+  $('div#zonaJuegos').hide();
   // $('div#menuBocadillos').hide();
 
 $('#textoSeleccion').val("3.50 €");// CAMBIAR LO QUE PONE EN EL TEXTO SELECCION
@@ -82,13 +84,14 @@ function cerrarAlertReserva(){
 
       // Comidas
   function moverComida(){
+    console.log("Mover Comida");
     $('#menu').hide(500);
-    $('.menuComida').show(500);
+    $('#zonaComida').show(500);
   }
 
   function moverBocadillo(){
     $('.menuComida').hide(500);
-    $('.menuBocadillos').show(500);
+    $('#zonaBocadillos').show(500);
   }
 
   function moverSeleccion(){
@@ -102,7 +105,8 @@ function cerrarAlertReserva(){
   }
   // WIP Juegos
   function moverJuego(){
-    console.log("juego :D");
+    $('#menu').hide(500);
+    $('#zonaJuegos').show(500);
   }
 
   // Funciones de movilidad por la barra de navegación
