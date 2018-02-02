@@ -96,35 +96,37 @@
                         <p class="nav-tabs">Juegos</p>
                         <img class="imgMenu" src="img/juegos.png">
                     </div>
+                </div>
 
-                    <div class="menuComida">
+                <!--Div donde se elegira entre entrantes, hamburguesas, bocadillos o sandwich-->
+                <div class="menuComida">
 
-                        <h3>Comida</h3>
+                    <h3>Comida</h3>
 
-                        <div class="row">
-                            <div class="optComida col col-xs-6">
-                                <p id="entrantes">Entrantes</p>
-                                <img class="imgMenuComida" src="img/entrante.jpg" alt="Entrantes">
-                            </div>
-                            <div class="optComida col col-xs-6">
-                                <p id="hamburguesa">Hamburguesa</p>
-                                <img class="imgMenuComida" src="img/hamburguesa.jpg" alt="Entrantes">
-                            </div>
+                    <div class="row">
+                        <div class="optComida col col-xs-6">
+                            <p id="entrantes">Entrantes</p>
+                            <img class="imgMenuComida" src="img/entrante.jpg" alt="Entrantes">
                         </div>
+                        <div class="optComida col col-xs-6">
+                            <p id="hamburguesa">Hamburguesa</p>
+                            <img class="imgMenuComida" src="img/hamburguesa.jpg" alt="Entrantes">
+                        </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="optComida col col-xs-6">
-                                <p id="bocadillo">Bocadillo</p>
-                                <img class="imgMenuComida" src="img/bocadillo.jpg" alt="Entrantes">
-                            </div>
-                            <div class="optComida col col-xs-6">
-                                <p id="sandwich">Sandwich</p>
-                                <img class="imgMenuComida" src="img/sandwich.jpg" alt="Entrantes">
-                            </div>
+                    <div class="row">
+                        <div class="optComida col col-xs-6">
+                            <p id="bocadillo">Bocadillo</p>
+                            <img class="imgMenuComida" src="img/bocadillo.jpg" alt="Entrantes">
+                        </div>
+                        <div class="optComida col col-xs-6">
+                            <p id="sandwich">Sandwich</p>
+                            <img class="imgMenuComida" src="img/sandwich.jpg" alt="Entrantes">
                         </div>
                     </div>
                 </div>
 
+                <!--Div donde se elegira entre los diferentes entrantes-->
                 <div class="menuEntrantes">
 
                     <h3>Nuestros Entrantes</h3>
@@ -179,6 +181,7 @@
                     </div>
                 </div>
 
+                <!--Div donde se elegira entre los diferentes bocadillos-->
                 <div class="menuBocadillos">
 
                     <h3>Nuestros Bocadillos</h3>
@@ -220,6 +223,54 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="seleccion">
+
+                    <div class="row" id="fotoSeleccion">
+                        <div class="col-xs-12">
+                            <img src="/img/jamon.jpg" alt="Imagen" id="imagen">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row" id="descripcion">
+                        <div class="col-xs-12">
+                            <h4>Descripcion:</h4>
+                        </div>
+                        <div class="col-xs-12">
+                            <p>Aqui ira la descripcion del producto: <br> -Ingrediente 1 <br> -Ingrediente 2 <br> -Ingrediente 3 </p>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="form-group col-xs-offset-2 col-xs-3">
+                            <label for="sel1">Cantidad:</label>
+                            <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group col-xs-5">
+                            <label for="textoSeleccion">Precio:</label>
+                            <input type="text" name="lname" id="textoSeleccion" class="form-control" disabled>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <button type="button" class="btn btn-default btn-lg col-xs-offset-1 col-xs-10">Añadir</button>
+                    </div>
+                </div>
+
+
             </div>
 
 
