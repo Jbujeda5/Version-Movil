@@ -134,7 +134,8 @@ td {
 }
 
 .menuEntrantes,
-.menuBocadillos {
+.menuBocadillos,
+.seleccion{
     display: none;
 }
 
