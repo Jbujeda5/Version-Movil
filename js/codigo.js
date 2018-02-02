@@ -7,6 +7,18 @@ $(function() {
   $('a#iraInicio').on('click', irInicio);
   $('a#iraPedidos').on('click', irZonaPedidos);
 
+  // Zona Seleccio
+
+  $('#sel1').on('change', cambiarPrecio);
+  $('#anyadirReserva').on('click', mostrarAlertReserva);
+
+  // Zona Seleccion de menús
+  $('#comida').on('click', moverComida);
+  $('#bebida').on('click', moverBebida);
+  $('#juegos').on('click', moverJuego);
+  $('#irBocadillo').on('click', moverBocadillo);
+  $('#bocadilloSerrano').on('click', moverSeleccion);
+
   // Zona Reservas
   $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
   $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
@@ -29,7 +41,61 @@ $(function() {
   // Ocultando elementos
   $(".alert").hide();
   $('div#menu').hide();
-  $('div#paginaInicial').hide();
+  $('div#zonaPedidos').hide();
+  // $('div#menuEntrantes').hide();
+  // $('div#menuComida').hide();
+  // $('div#menuBocadillos').hide();
+
+$('#textoSeleccion').val("3.50 €");// CAMBIAR LO QUE PONE EN EL TEXTO SELECCION
+
+
+
+// Zona de Seleccion Compra
+
+function cambiarPrecio(){
+  console.log("Precio Cambiado");
+  let precio = 3.50;
+  let cantidad = $('#sel1').val();
+  let precioFinal = precio * cantidad;
+
+  $('#textoSeleccion').val(precioFinal + " €");
+
+}
+
+function mostrarAlertReserva(){
+  $('#alertAnyadirReserva').slideDown();
+  $(".seleccion *").attr("disabled", "true");
+}
+
+  // Movilidad en menús
+
+      // Comidas
+  function moverComida(){
+    console.log("comida :D");
+    $('#menu').hide(500);
+    $('.menuComida').show(500);
+  }
+
+  function moverBocadillo(){
+    console.log("BOCADILLOS!");
+    $('.menuComida').hide(500);
+    $('.menuBocadillos').show(500);
+  }
+
+  function moverSeleccion(){
+    console.log("Serrano");
+    $('.menuBocadillos').hide(500);
+    $('.seleccion').show(500);
+  }
+
+  // WIP Bebidas
+  function moverBebida(){
+    console.log("bebida :D");
+  }
+  // WIP Juegos
+  function moverJuego(){
+    console.log("juego :D");
+  }
 
   // Funciones de movilidad por la barra de navegación
   function irInicio(){

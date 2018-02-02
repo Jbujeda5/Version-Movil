@@ -82,7 +82,7 @@
 
                 <!--Div donde aparece lo que quieres seleccionar, como comida, bebida o algun juego-->
                 <div id="menu">
-                    <div id="comida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
+                    <div id="comida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary" bg-primary>
                         <p class="nav-tabs">Comida</p>
                         <img class="imgMenu" src="img/comida.png">
                     </div>
@@ -104,24 +104,24 @@
                     <h3>Comida</h3>
 
                     <div class="row">
-                        <div class="optComida col col-xs-6">
+                        <div class="col col-xs-6 bg-primary optComida">
                             <p id="entrantes">Entrantes</p>
-                            <img class="imgMenuComida" src="img/entrante.jpg" alt="Entrantes">
+                            <img class="imgMenuComida img-circle" src="img/entrante.jpg" alt="Entrantes">
                         </div>
-                        <div class="optComida col col-xs-6">
+                        <div class="col col-xs-6 bg-primary optComida">
                             <p id="hamburguesa">Hamburguesa</p>
-                            <img class="imgMenuComida" src="img/hamburguesa.jpg" alt="Entrantes">
+                            <img class="imgMenuComida img-circle" src="img/hamburguesa.jpg" alt="Entrantes">
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="optComida col col-xs-6">
+                        <div class="bg-primary col col-xs-6 optComida" id="irBocadillo">
                             <p id="bocadillo">Bocadillo</p>
-                            <img class="imgMenuComida" src="img/bocadillo.jpg" alt="Entrantes">
+                            <img class="imgMenuComida img-circle" src="img/bocadillo.jpg" alt="Entrantes">
                         </div>
-                        <div class="optComida col col-xs-6">
+                        <div class="bg-primary col col-xs-6 optComida">
                             <p id="sandwich">Sandwich</p>
-                            <img class="imgMenuComida" src="img/sandwich.jpg" alt="Entrantes">
+                            <img class="imgMenuComida img-circle" src="img/sandwich.jpg" alt="Entrantes">
                         </div>
                     </div>
                 </div>
@@ -187,38 +187,38 @@
                     <h3>Nuestros Bocadillos</h3>
 
                     <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
-                            <div class="panel-body">
-                                <p>Serrano</p>
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body" id="bocadilloSerrano">
+                                <h4 class="text-center">Serrano</h4>
                             </div>
                         </div>
-                        <div class="panel panel-primary col-xs-5">
+                        <div class="bg-primary optComida col-xs-5">
                             <div class="panel-body">
-                                <p>Chivito</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
-                            <div class="panel-body">
-                                <p>Brascada</p>
-                            </div>
-                        </div>
-                        <div class="panel panel-primary col-xs-5">
-                            <div class="panel-body">
-                                <p>Tortilla</p>
+                                <h4 class="text-center">Chivito</h4>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
                             <div class="panel-body">
-                                <p>Almussafes</p>
+                                <h4 class="text-center">Brascada</h4>
                             </div>
                         </div>
-                        <div class="panel panel-primary col-xs-5">
+                        <div class="bg-primary optComida col-xs-5">
                             <div class="panel-body">
-                                <p>Vegetal</p>
+                                <h4 class="text-center">Tortilla</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Almussafes</h4>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Vegetal</h4>
                             </div>
                         </div>
                     </div>
@@ -227,20 +227,24 @@
                <!--Div donde aparece los detalles del producto elegido-->
                 <div class="seleccion">
 
-                    <div class="row" id="fotoSeleccion">
-                        <div class="col-xs-12">
-                            <img src="/img/jamon.jpg" alt="Imagen" id="imagen">
-                        </div>
-                    </div>
-
-                    <br>
-
-                    <div class="row" id="descripcion">
+                  <!-- Alerts de Seleccion -->
+                  <div class="alert alert-success alert-dismissible" role="alert" id="alertAnyadirReserva">
+                      <button type="button" class="btn btn-success btn-xs close" id="cerrarAnyadirReserva"><i class="glyphicon glyphicon-remove"></i></button>
+                      <p>Añadido a <strong>Reservas</strong></p>
+                      <strong>Resumen del Pedido:</strong>
+                      <ul>
+                          <li>Bocadillo de Jamón Serrano x 1</li>
+                      </ul>
+                      <strong>Precio: 3.50€</strong>
+                      <br>
+                  </div>
+                  <!-- Fin Alerts de Selección -->
+                    <div class="row bg-primary optComida" id="descripcion">
                         <div class="col-xs-12">
                             <h4>Descripcion:</h4>
                         </div>
                         <div class="col-xs-12">
-                            <p>Aqui ira la descripcion del producto: <br> -Ingrediente 1 <br> -Ingrediente 2 <br> -Ingrediente 3 </p>
+                            <h4>Aqui ira la descripcion del producto: <br> -Ingrediente 1 <br> -Ingrediente 2 <br> -Ingrediente 3 </h4>
                         </div>
                     </div>
 
@@ -267,7 +271,7 @@
                     <br>
 
                     <div class="row">
-                        <button type="button" class="btn btn-default btn-lg col-xs-offset-1 col-xs-10">Añadir</button>
+                        <button type="button" class="btn btn-success btn-lg col-xs-offset-1 col-xs-10" id="anyadirReserva">Añadir</button>
                     </div>
                 </div>
 
