@@ -1,16 +1,20 @@
 $(function() {
 
 
+
+  // Sliders
+  $('#sliderPedido').on('click', irZonaPedidos);
+
   // Zona Inicial
   $('#codigoqr').on('click', ocultarQR);
   $('#iconoBar').on('click', irInicio);
   $('a#iraInicio').on('click', irInicio);
   $('a#iraPedidos').on('click', irZonaPedidos);
 
-  // Zona Seleccio
-
+  // Zona Seleccion
   $('#sel1').on('change', cambiarPrecio);
   $('#anyadirReserva').on('click', mostrarAlertReserva);
+  $('#cerrarAlertReserva').on('click', cerrarAlertReserva);
 
   // Zona Seleccion de menús
   $('#comida').on('click', moverComida);
@@ -24,6 +28,7 @@ $(function() {
   $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
   $('#botonDenegarCompra').on('click', cerrarAlertConfirmarCompra);
   $('#cerrarCompraCorrecto').on('click', cerrarAlertConfirmarCompraReservada);
+  $('#tablaReserva').on('click', mostrarMensaje);
 
   // Zona Favoritos Menús
   $('#botonConfirmarCompraFav').on('click', confirmarAlertConfirmarCompraFav);
@@ -53,37 +58,40 @@ $('#textoSeleccion').val("3.50 €");// CAMBIAR LO QUE PONE EN EL TEXTO SELECCIO
 // Zona de Seleccion Compra
 
 function cambiarPrecio(){
-  console.log("Precio Cambiado");
   let precio = 3.50;
   let cantidad = $('#sel1').val();
   let precioFinal = precio * cantidad;
 
   $('#textoSeleccion').val(precioFinal + " €");
-
 }
 
 function mostrarAlertReserva(){
   $('#alertAnyadirReserva').slideDown();
   $(".seleccion *").attr("disabled", "true");
+  $('button#cerrarAlertReserva').removeAttr("disabled");
+}
+
+function cerrarAlertReserva(){
+  $('#alertAnyadirReserva').slideUp();
+  $('.seleccion *').removeAttr('disabled');
+  $('.seleccion').hide(500);
+  $('#menu').show(500);
 }
 
   // Movilidad en menús
 
       // Comidas
   function moverComida(){
-    console.log("comida :D");
     $('#menu').hide(500);
     $('.menuComida').show(500);
   }
 
   function moverBocadillo(){
-    console.log("BOCADILLOS!");
     $('.menuComida').hide(500);
     $('.menuBocadillos').show(500);
   }
 
   function moverSeleccion(){
-    console.log("Serrano");
     $('.menuBocadillos').hide(500);
     $('.seleccion').show(500);
   }
@@ -105,7 +113,6 @@ function mostrarAlertReserva(){
   }
 
   function irZonaPedidos(){
-    console.log("Hola");
     $("#bs-example-navbar-collapse-1").removeClass('in open');
     $('#zonaPedidos').show(500);
     $('#paginaInicial').hide(500);

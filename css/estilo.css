@@ -158,6 +158,17 @@ td {
     margin-right: 10px;
 }
 
+.sliders{
+  /* background-color: blue;
+  color: white; */
+  height: 150px;
+}
+
+.carousel-inner{
+  background-color: #08f;
+  color: white;
+}
+
 /*********************************/
 
 

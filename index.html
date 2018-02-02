@@ -226,10 +226,9 @@
 
                <!--Div donde aparece los detalles del producto elegido-->
                 <div class="seleccion">
-
                   <!-- Alerts de Seleccion -->
                   <div class="alert alert-success alert-dismissible" role="alert" id="alertAnyadirReserva">
-                      <button type="button" class="btn btn-success btn-xs close" id="cerrarAnyadirReserva"><i class="glyphicon glyphicon-remove"></i></button>
+                      <button type="button" class="btn btn-success btn-xs close" id="cerrarAlertReserva"><i class="glyphicon glyphicon-remove"></i></button>
                       <p>Añadido a <strong>Reservas</strong></p>
                       <strong>Resumen del Pedido:</strong>
                       <ul>
@@ -311,13 +310,13 @@
                             <th>Precio €</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tablaReserva">;
                         <tr>
                             <td>1</td>
                             <td>Bocadillo</td>
-                            <td>1</td>
+                            <td>2</td>
                             <td>10</td>
-                            <td>3.50</td>
+                            <td>7</td>
                         </tr>
                     </tbody>
                     <tfoot>
@@ -326,7 +325,7 @@
                             <td></td>
                             <td></td>
                             <td>Total</td>
-                            <td>3.50</td>
+                            <td>7</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -391,6 +390,46 @@
 
     <div class="container" id="paginaInicial">
         <h1 class="text-center">Bienvenido</h1>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active text-center sliders container" id="sliderPedido">
+      <!-- <img src="img/bocadillo.jpg" alt="Los Angeles"> -->
+      <h4>¡Haz tu pedido ahora!</h4>
+      <p>Tu pedido en un solo click</p>
+    </div>
+
+    <div class="item text-center sliders container">
+      <!-- <img src="img/sandwich.jpg" alt="Chicago"> -->
+      <h4>¡Conócenos!</h4>
+      <p>¿Quienes somos? Descúbrelo</p>
+    </div>
+
+    <div class="item text-center sliders container">
+      <!-- <img src="img/jamon.jpg" alt="New York"> -->
+      <h4>¡Echa un vistazo!</h4>
+      <p>Acede a nuestra Galeria</p>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
     </div>
 
 </body>
