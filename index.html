@@ -2,244 +2,341 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aplicacion Movil del bar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion Movil del bar</title>
 
-  <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
 
-  <!--Enlace a la liberia de jQuery-->
-  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <!--Enlace a la liberia de jQuery-->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
-  <!--Enlace a las funciones-->
-  <script src="js/codigo.js" type="text/javascript"></script>
+    <!--Enlace a las funciones-->
+    <script src="js/codigo.js" type="text/javascript"></script>
 
-  <!--Codigo CDN para utilizar jQuery UI -->
-  <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js" type="text/javascript"></script>
+    <!--Codigo CDN para utilizar jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js" type="text/javascript"></script>
 
-  <!--Codigos CDN de BootStrap-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Codigos CDN de BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <!--Enlace a la hoja de estilos-->
-  <link rel="stylesheet" title="normal" href="css/estilo.css" type="text/css" media="screen" />
+    <!--Enlace a la hoja de estilos-->
+    <link rel="stylesheet" title="normal" href="css/estilo.css" type="text/css" media="screen" />
 
-  <!--Codigo CDN para utilizar Font Awesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+    <!--Codigo CDN para utilizar Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" id="iconoBar" href="#paginaInicial">Bar</a>
-      </div>
+                <a class="navbar-brand" id="iconoBar" href="#paginaInicial">Bar</a>
+            </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#" id="iraInicio">Inicio <span class="sr-only">(current)</span></a></li>
-          <li><a href="error.html">El bar</a></li>
-          <li><a href="error.html">Agenda</a></li>
-          <li><a href="error.html">Galeria</a></li>
-          <li><a href="error.html">Contacto</a></li>
-          <li><a href="#" id="iraPedidos">Pedidos</a></li>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" id="iraInicio">Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href="error.html">El bar</a></li>
+                    <li><a href="error.html">Agenda</a></li>
+                    <li><a href="error.html">Galeria</a></li>
+                    <li><a href="error.html">Contacto</a></li>
+                    <li><a href="#" id="iraPedidos">Pedidos</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" id="zonaPedidos">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#pedidos">Pedidos</a></li>
+            <li><a data-toggle="tab" href="#reservas">Reservas</a></li>
+            <li><a data-toggle="tab" href="#favoritos">Lo de siempre</a></li>
         </ul>
-      </div>
-      <!-- /.navbar-collapse -->
+
+        <div class="tab-content">
+
+            <!--Pestaña del tab donde se podra hacer el pedido de la mesa-->
+            <div id="pedidos" class="tab-pane fade in active">
+
+                <!--Div donde se leera el codigo QR de la mesa para poder hacer el pedido-->
+                <div id="codigo">
+                    <p>Escanea el código de la mesa </p>
+                    <img id="codigoqr" src="img/qr.jpg">
+                </div>
+
+                <!--Div donde aparece lo que quieres seleccionar, como comida, bebida o algun juego-->
+                <div id="menu">
+                    <div id="comida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
+                        <p class="nav-tabs">Comida</p>
+                        <img class="imgMenu" src="img/comida.png">
+                    </div>
+
+                    <div id="bebida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
+                        <p class="nav-tabs">Bebida</p>
+                        <img class="imgMenu" src="img/bebida.png">
+                    </div>
+
+                    <div id="juegos" class="optmenu col col-xs-offset-3 col-xs-6  bg-primary">
+                        <p class="nav-tabs">Juegos</p>
+                        <img class="imgMenu" src="img/juegos.png">
+                    </div>
+
+                    <div class="menuComida">
+
+                        <h3>Comida</h3>
+
+                        <div class="row">
+                            <div class="optComida col col-xs-6">
+                                <p id="entrantes">Entrantes</p>
+                                <img class="imgMenuComida" src="img/entrante.jpg" alt="Entrantes">
+                            </div>
+                            <div class="optComida col col-xs-6">
+                                <p id="hamburguesa">Hamburguesa</p>
+                                <img class="imgMenuComida" src="img/hamburguesa.jpg" alt="Entrantes">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="optComida col col-xs-6">
+                                <p id="bocadillo">Bocadillo</p>
+                                <img class="imgMenuComida" src="img/bocadillo.jpg" alt="Entrantes">
+                            </div>
+                            <div class="optComida col col-xs-6">
+                                <p id="sandwich">Sandwich</p>
+                                <img class="imgMenuComida" src="img/sandwich.jpg" alt="Entrantes">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menuEntrantes">
+
+                    <h3>Nuestros Entrantes</h3>
+
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Boquerones</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Bravas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Calamares</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Sepia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Croquetas</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Ibéricos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Pulpo</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Tabla Patés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menuBocadillos">
+
+                    <h3>Nuestros Bocadillos</h3>
+
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Serrano</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Chivito</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Brascada</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Tortilla</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Almussafes</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary col-xs-5">
+                            <div class="panel-body">
+                                <p>Vegetal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Zona donde poder ver tus reservas -->
+            <div id="reservas" class="tab-pane fade">
+
+                <!-- Alerts de las reservas -->
+                <div class="alert confirmacionesAlerts" role="alert" id="confirmarCompraAlert">
+                    <p><strong>¿Seguro que desea realizar la compra?</strong></p>
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompra"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                    <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompra"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                </div>
+                <div class="alert alert-success alert-dismissible" role="alert" id="confirmarcompraRealizada">
+                    <button type="button" class="btn btn-success btn-xs close" id="cerrarCompraCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                    <p>Pedido Realizado</p>
+                    <strong>Resumen del Pedido:</strong>
+                    <ul>
+                        <li>Bocadillo x 1</li>
+                    </ul>
+                    <strong>Precio: 3.50€</strong>
+                    <br>
+                </div>
+                <!-- Fin Alerts de las reservas -->
+                <!-- Tabla con los articulos guardados en el carrito -->
+                <table class="table-striped table-condensed table-responsive">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Mesa</th>
+                            <th>Precio €</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Bocadillo</td>
+                            <td>1</td>
+                            <td>10</td>
+                            <td>3.50</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Total</td>
+                            <td>3.50</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!-- Botones de Confirmar Compra -->
+                <div id="botonesReservas">
+                    <button type="button" id="confirmarCompra" class="btn btn-lg btn-success btn-responsive"><i class="fas fa-check"></i>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Apartado de pedidos favoritos -->
+            <div id="favoritos" class="tab-pane fade">
+                <div class="container" id="containerFav">
+                    <!-- Alerts -->
+                    <div class="alerts">
+                        <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
+                            <button type="button" class="btn btn-danger btn-xs close" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                            <p>No se puede realizar el pedido.</p>
+                            <strong>Motivos:</strong>
+                            <ul>
+                                <li>Faltan ingredientes</li>
+                                <li>Falta dinero en la cuenta</li>
+                            </ul>
+                        </div>
+                        <div class="alert confirmacionesAlerts" role="alert" id="confirmarCompraFavAlert">
+                            <p><strong>¿Seguro que desea realizar la compra de "CERVEZA!!!"?</strong></p>
+                            <br>
+                            <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompraFav"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                            <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompraFav"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                        </div>
+                        <div class="alert confirmacionesAlerts" role="alert" id="alertAnyadirNuevoMenuFav">
+                            <p><strong>¿Desea añadir un nuevo menú favorito?</strong></p>
+                            <br>
+                            <button type="button" class="btn btn-success btn-sm" id="confirmarAnyadirMenú"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                            <button type="button" class="btn btn-danger btn-sm" id="denegarAnyadirMenú"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                        </div>
+                        <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
+                            <button type="button" class="btn btn-success btn-xs close" id="cerrarFavCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                            <p>Pedido Realizado</p>
+                            <strong>Resumen del Pedido:</strong>
+                            <ul>
+                                <li>Cerveza x 1</li>
+                            </ul>
+                            <strong>Precio: 1.50€</strong>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- Fin Alerts -->
+
+                    <!-- Menús creados por el usuario -->
+                    <button type="button" class="btn btn-block btn-danger" id="menuFavIncorrecto">Noche de Martes</button>
+                    <button type="button" class="btn btn-block btn-success" id="menuFavCorrecto">CERVEZA!!!</button>
+
+                    <!-- Boton de añadir nuevos menús predefinidos -->
+                    <div class="container" id="anyadirFav">
+                        <button type="button" class="btn btn-circle btn-lg pull-right btn-dark" id="anyadirFavButton"><i class="glyphicon glyphicon-plus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
 
-  <div class="container" id="zonaPedidos">
-
-    <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#pedidos">Pedidos</a></li>
-      <li><a data-toggle="tab" href="#reservas">Reservas</a></li>
-      <li><a data-toggle="tab" href="#favoritos">Lo de siempre</a></li>
-    </ul>
-
-    <div class="tab-content">
-
-      <!--Pestaña del tab donde se podra hacer el pedido de la mesa-->
-      <div id="pedidos" class="tab-pane fade in active">
-
-        <!--Div donde se leera el codigo QR de la mesa para poder hacer el pedido-->
-        <div id="codigo">
-          <p>Escanea el código de la mesa </p>
-          <img id="codigoqr" src="img/qr.jpg">
-        </div>
-
-        <!--Div donde aparece lo que quieres seleccionar, como comida, bebida o algun juego-->
-        <div id="menu">
-          <div id="comida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
-            <p class="nav-tabs">Comida</p>
-            <img class="imgMenu" src="img/comida.png">
-          </div>
-
-          <div id="bebida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
-            <p class="nav-tabs">Bebida</p>
-            <img class="imgMenu" src="img/bebida.png">
-          </div>
-
-          <div id="juegos" class="optmenu col col-xs-offset-3 col-xs-6  bg-primary">
-            <p class="nav-tabs">Juegos</p>
-            <img class="imgMenu" src="img/juegos.png">
-          </div>
-
-          <div class="menuComida">
-
-            <h3>Comida</h3>
-
-            <div class="row">
-              <div class="optComida col col-xs-6">
-                <p id="entrantes">Entrantes</p>
-                <img class="imgMenuComida" src="img/entrante.jpg" alt="Entrantes">
-              </div>
-              <div class="optComida col col-xs-6">
-                <p id="hamburguesa">Hamburguesa</p>
-                <img class="imgMenuComida" src="img/hamburguesa.jpg" alt="Entrantes">
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="optComida col col-xs-6">
-                <p id="bocadillo">Bocadillo</p>
-                <img class="imgMenuComida" src="img/bocadillo.jpg" alt="Entrantes">
-              </div>
-              <div class="optComida col col-xs-6">
-                <p id="sandwich">Sandwich</p>
-                <img class="imgMenuComida" src="img/sandwich.jpg" alt="Entrantes">
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-      <!-- Zona donde poder ver tus reservas -->
-      <div id="reservas" class="tab-pane fade">
-
-        <!-- Alerts de las reservas -->
-        <div class="alert confirmacionesAlerts" role="alert" id="confirmarCompraAlert">
-          <p><strong>¿Seguro que desea realizar la compra?</strong></p>
-          <br>
-          <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompra"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
-          <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompra"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
-        </div>
-        <div class="alert alert-success alert-dismissible" role="alert" id="confirmarcompraRealizada">
-          <button type="button" class="btn btn-success btn-xs close" id="cerrarCompraCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
-          <p>Pedido Realizado</p>
-          <strong>Resumen del Pedido:</strong>
-          <ul>
-            <li>Bocadillo x 1</li>
-          </ul>
-          <strong>Precio: 3.50€</strong>
-          <br>
-        </div>
-        <!-- Fin Alerts de las reservas -->
-        <!-- Tabla con los articulos guardados en el carrito -->
-        <table class="table-striped table-condensed table-responsive">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Nombre</th>
-              <th>Cantidad</th>
-              <th>Mesa</th>
-              <th>Precio €</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Bocadillo</td>
-              <td>1</td>
-              <td>10</td>
-              <td>3.50</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>Total</td>
-              <td>3.50</td>
-            </tr>
-          </tfoot>
-        </table>
-        <!-- Botones de Confirmar Compra -->
-        <div id="botonesReservas">
-          <button type="button" id="confirmarCompra" class="btn btn-lg btn-success btn-responsive"><i class="fas fa-check"></i>Comprar</button>
-        </div>
-      </div>
-
-      <!-- Apartado de pedidos favoritos -->
-      <div id="favoritos" class="tab-pane fade">
-        <div class="container" id="containerFav">
-          <!-- Alerts -->
-          <div class="alerts">
-            <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
-              <button type="button" class="btn btn-danger btn-xs close" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
-              <p>No se puede realizar el pedido.</p>
-              <strong>Motivos:</strong>
-              <ul>
-                <li>Faltan ingredientes</li>
-                <li>Falta dinero en la cuenta</li>
-              </ul>
-            </div>
-            <div class="alert confirmacionesAlerts" role="alert" id="confirmarCompraFavAlert">
-              <p><strong>¿Seguro que desea realizar la compra de "CERVEZA!!!"?</strong></p>
-              <br>
-              <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompraFav"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
-              <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompraFav"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
-            </div>
-            <div class="alert confirmacionesAlerts" role="alert" id="alertAnyadirNuevoMenuFav">
-              <p><strong>¿Desea añadir un nuevo menú favorito?</strong></p>
-              <br>
-              <button type="button" class="btn btn-success btn-sm" id="confirmarAnyadirMenú"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
-              <button type="button" class="btn btn-danger btn-sm" id="denegarAnyadirMenú"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
-            </div>
-            <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
-              <button type="button" class="btn btn-success btn-xs close" id="cerrarFavCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
-              <p>Pedido Realizado</p>
-              <strong>Resumen del Pedido:</strong>
-              <ul>
-                <li>Cerveza x 1</li>
-              </ul>
-              <strong>Precio: 1.50€</strong>
-              <br>
-            </div>
-          </div>
-          <!-- Fin Alerts -->
-
-          <!-- Menús creados por el usuario -->
-          <button type="button" class="btn btn-block btn-danger" id="menuFavIncorrecto">Noche de Martes</button>
-          <button type="button" class="btn btn-block btn-success" id="menuFavCorrecto">CERVEZA!!!</button>
-
-          <!-- Boton de añadir nuevos menús predefinidos -->
-          <div class="container" id="anyadirFav">
-            <button type="button" class="btn btn-circle btn-lg pull-right btn-dark" id="anyadirFavButton"><i class="glyphicon glyphicon-plus"></i></button>
-          </div>
-        </div>
-
-      </div>
+    <div class="container" id="paginaInicial">
+        <h1 class="text-center">Bienvenido</h1>
     </div>
-  </div>
-  <div class="container" id="paginaInicial">
-    <h1 class="text-center">Bienvenido</h1>
-  </div>
+
 </body>
 
 </html>
