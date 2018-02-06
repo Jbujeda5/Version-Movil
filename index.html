@@ -42,7 +42,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" id="iconoBar" href="#paginaInicial">Bar</a>
+                <a class="navbar-brand" id="iconoBar" href="index.html?div=paginaInicial">Bar</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,7 +53,7 @@
                     <li><a href="error.html">Agenda</a></li>
                     <li><a href="error.html">Galeria</a></li>
                     <li><a href="error.html">Contacto</a></li>
-                    <li><a href="#" id="iraPedidos">Pedidos</a></li>
+                    <li><a href="index.html?div=codigo" id="iraPedidos">Pedidos</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -75,16 +75,16 @@
             <div id="pedidos" class="tab-pane fade in active">
 
                 <!--Div donde se leera el codigo QR de la mesa para poder hacer el pedido-->
-                <div id="codigo">
+                <div class="oculto" id="codigo">
                     <h4>Escanea el código de la mesa </h4>
-                    <img id="codigoqr" src="img/qr.jpg">
+                    <a href="index.html?div=menu"><img id="codigoqr" src="img/qr.jpg"></a>
                 </div>
 
                 <!--Div donde aparece lo que quieres seleccionar, como comida, bebida o algun juego-->
-                <div id="menu">
+                <div id="menu" class="oculto">
                     <div id="comida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary" bg-primary>
                         <p class="nav-tabs">Comida</p>
-                        <img class="imgMenu" src="img/comida.png">
+                        <a href="index.html?div=zonaComida"><img class="imgMenu" src="img/comida.png"></a>
                     </div>
 
                     <div id="bebida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
@@ -94,129 +94,86 @@
 
                     <div id="juegos" class="optmenu col col-xs-offset-3 col-xs-6  bg-primary">
                         <p class="nav-tabs">Juegos</p>
-                        <img class="imgMenu" src="img/juegos.png">
-                    </div>
-                </div>
-
-                <!-- Zona donde se muestran los distintos juegos -->
-                <div class="menuBocadillos" id="zonaJuegos">
-
-                    <h3>¿Jugamos?</h3>
-
-                    <div class="row">
-                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
-                            <div class="panel-body" id="risk">
-                                <h4 class="text-center">Risk</h4>
-                            </div>
-                        </div>
-                        <div class="bg-primary optComida col-xs-5">
-                            <div class="panel-body">
-                                <h4 class="text-center">Monopoli</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
-                            <div class="panel-body">
-                                <h4 class="text-center">Catán</h4>
-                            </div>
-                        </div>
-                        <div class="bg-primary optComida col-xs-5">
-                            <div class="panel-body">
-                                <h4 class="text-center">Parchís</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
-                            <div class="panel-body">
-                                <h4 class="text-center">Dominó</h4>
-                            </div>
-                        </div>
-                        <div class="bg-primary optComida col-xs-5">
-                            <div class="panel-body">
-                                <h4 class="text-center">Munchkin</h4>
-                            </div>
-                        </div>
+                        <a href="index.html?div=zonaJuegos"><img class="imgMenu" src="img/juegos.png"></a>
                     </div>
                 </div>
 
                 <!--Div donde se elegira entre entrantes, hamburguesas, bocadillos o sandwich-->
-                <div class="menuComida" id="zonaComida">
+                <div class="menuComida oculto" id="zonaComida">
 
                     <h3>Comida</h3>
 
                     <div class="row">
                         <div class="col col-xs-6 bg-primary optComida">
                             <p id="entrantes">Entrantes</p>
-                            <img class="imgMenuComida img-circle" src="img/entrante.jpg" alt="Entrantes">
+                            <a href="index.html?div=zonaEntrantes"><img class="imgMenuComida img-circle" src="img/entrante.jpg" alt="Entrantes"></a>
                         </div>
                         <div class="col col-xs-6 bg-primary optComida">
                             <p id="hamburguesa">Hamburguesa</p>
-                            <img class="imgMenuComida img-circle" src="img/hamburguesa.jpg" alt="Entrantes">
+                            <img class="imgMenuComida img-circle" src="img/hamburguesa.jpg" alt="Hamburguesa">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="bg-primary col col-xs-6 optComida" id="irBocadillo">
                             <p id="bocadillo">Bocadillo</p>
-                            <img class="imgMenuComida img-circle" src="img/bocadillo.jpg" alt="Entrantes">
+                            <a href="index.html?div=zonaBocadillos"><img class="imgMenuComida img-circle" src="img/bocadillo.jpg" alt="Bocadillo"></a>
                         </div>
                         <div class="bg-primary col col-xs-6 optComida">
                             <p id="sandwich">Sandwich</p>
-                            <img class="imgMenuComida img-circle" src="img/sandwich.jpg" alt="Entrantes">
+                            <img class="imgMenuComida img-circle" src="img/sandwich.jpg" alt="Sandwich">
                         </div>
                     </div>
                 </div>
 
                 <!--Div donde se elegira entre los diferentes entrantes-->
-                <div class="menuEntrantes">
+                <div class="optComida oculto" id="zonaEntrantes">
 
                     <h3>Nuestros Entrantes</h3>
 
                     <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
                             <div class="panel-body">
                                 <p>Boquerones</p>
                             </div>
                         </div>
-                        <div class="panel panel-primary col-xs-5">
+                        <div class="bg-primary optComida col-xs-5">
                             <div class="panel-body">
                                 <p>Bravas</p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
                             <div class="panel-body">
                                 <p>Calamares</p>
                             </div>
                         </div>
-                        <div class="panel panel-primary col-xs-5">
+                        <div class="bg-primary optComida col-xs-5">
                             <div class="panel-body">
                                 <p>Sepia</p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
                             <div class="panel-body">
                                 <p>Croquetas</p>
                             </div>
                         </div>
-                        <div class="panel panel-primary col-xs-5">
+                        <div class="bg-primary optComida col-xs-5">
                             <div class="panel-body">
                                 <p>Ibéricos</p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="panel panel-primary col-xs-offset-1 col-xs-5">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
                             <div class="panel-body">
                                 <p>Pulpo</p>
                             </div>
                         </div>
-                        <div class="panel panel-primary col-xs-5">
+                        <div class="bg-primary optComida col-xs-5">
                             <div class="panel-body">
                                 <p>Tabla Patés</p>
                             </div>
@@ -225,7 +182,7 @@
                 </div>
 
                 <!--Div donde se elegira entre los diferentes bocadillos-->
-                <div class="menuBocadillos" id="zonaBocadillos">
+                <div class="menuBocadillos oculto" id="zonaBocadillos">
 
                     <h3>Nuestros Bocadillos</h3>
 
@@ -267,20 +224,64 @@
                     </div>
                 </div>
 
-               <!--Div donde aparece los detalles del producto elegido-->
+                <!-- Zona donde se muestran los distintos juegos -->
+                <div class="oculto" id="zonaJuegos">
+
+                    <h3>¿Jugamos?</h3>
+
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body" id="risk">
+                                <h4 class="text-center">Risk</h4>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Monopoli</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Catán</h4>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Parchís</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Dominó</h4>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <h4 class="text-center">Munchkin</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Div donde aparece los detalles del producto elegido-->
                 <div class="seleccion">
-                  <!-- Alerts de Seleccion -->
-                  <div class="alert alert-success alert-dismissible" role="alert" id="alertAnyadirReserva">
-                      <button type="button" class="btn btn-success btn-xs close" id="cerrarAlertReserva"><i class="glyphicon glyphicon-remove"></i></button>
-                      <p>Añadido a <strong>Reservas</strong></p>
-                      <strong>Resumen del Pedido:</strong>
-                      <ul>
-                          <li>Bocadillo de Jamón Serrano x 1</li>
-                      </ul>
-                      <strong>Precio: 3.50€</strong>
-                      <br>
-                  </div>
-                  <!-- Fin Alerts de Selección -->
+                    <!-- Alerts de Seleccion -->
+                    <div class="alert alert-success alert-dismissible" role="alert" id="alertAnyadirReserva">
+                        <button type="button" class="btn btn-success btn-xs close" id="cerrarAlertReserva"><i class="glyphicon glyphicon-remove"></i></button>
+                        <p>Añadido a <strong>Reservas</strong></p>
+                        <strong>Resumen del Pedido:</strong>
+                        <ul>
+                            <li>Bocadillo de Jamón Serrano x 1</li>
+                        </ul>
+                        <strong>Precio: 3.50€</strong>
+                        <br>
+                    </div>
+                    <!-- Fin Alerts de Selección -->
                     <div class="row bg-primary optComida" id="descripcion">
                         <div class="col-xs-12">
                             <h4>Descripcion:</h4>
@@ -344,35 +345,35 @@
                 <!-- Fin Alerts de las reservas -->
                 <!-- Tabla con los articulos guardados en el carrito -->
                 <div class="container">
-                  <table class="table-striped table-condensed table-responsive">
-                      <thead>
-                          <tr>
-                              <th>#</th>
-                              <th>Nombre</th>
-                              <th>Cantidad</th>
-                              <th>Mesa</th>
-                              <th>Precio €</th>
-                          </tr>
-                      </thead>
-                      <tbody id="tablaReserva">
-                          <tr>
-                              <td>1</td>
-                              <td>Bocadillo</td>
-                              <td>2</td>
-                              <td>10</td>
-                              <td>7</td>
-                          </tr>
-                      </tbody>
-                      <tfoot>
-                          <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td>Total</td>
-                              <td>7</td>
-                          </tr>
-                      </tfoot>
-                  </table>
+                    <table class="table-striped table-condensed table-responsive">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Mesa</th>
+                                <th>Precio €</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaReserva">
+                            <tr>
+                                <td>1</td>
+                                <td>Bocadillo</td>
+                                <td>2</td>
+                                <td>10</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total</td>
+                                <td>7</td>
+                            </tr>
+                        </tfoot>
+                    </table>
                 </div>
 
                 <!-- Botones de Confirmar Compra -->
@@ -383,41 +384,41 @@
 
             <!-- Apartado de pedidos favoritos -->
             <div id="favoritos" class="tab-pane fade">
-              <!-- Alerts -->
-              <div class="alerts">
-                  <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
-                      <button type="button" class="btn btn-danger btn-xs close" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
-                      <p>No se puede realizar el pedido.</p>
-                      <strong>Motivos:</strong>
-                      <ul>
-                          <li>Faltan ingredientes</li>
-                          <li>Falta dinero en la cuenta</li>
-                      </ul>
-                  </div>
-                  <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="confirmarCompraFavAlert">
-                      <p><strong>¿Seguro que desea realizar la compra de "CERVEZA!!!"?</strong></p>
-                      <br>
-                      <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompraFav"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
-                      <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompraFav"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
-                  </div>
-                  <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="alertAnyadirNuevoMenuFav">
-                      <p><strong>¿Desea añadir un nuevo menú favorito?</strong></p>
-                      <br>
-                      <button type="button" class="btn btn-success btn-sm" id="confirmarAnyadirMenú"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
-                      <button type="button" class="btn btn-danger btn-sm" id="denegarAnyadirMenú"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
-                  </div>
-                  <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
-                      <button type="button" class="btn btn-success btn-xs close" id="cerrarFavCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
-                      <p>Pedido Realizado</p>
-                      <strong>Resumen del Pedido:</strong>
-                      <ul>
-                          <li>Cerveza x 1</li>
-                      </ul>
-                      <strong>Precio: 1.50€</strong>
-                      <br>
-                  </div>
-              </div>
-              <!-- Fin Alerts -->
+                <!-- Alerts -->
+                <div class="alerts">
+                    <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
+                        <button type="button" class="btn btn-danger btn-xs close" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                        <p>No se puede realizar el pedido.</p>
+                        <strong>Motivos:</strong>
+                        <ul>
+                            <li>Faltan ingredientes</li>
+                            <li>Falta dinero en la cuenta</li>
+                        </ul>
+                    </div>
+                    <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="confirmarCompraFavAlert">
+                        <p><strong>¿Seguro que desea realizar la compra de "CERVEZA!!!"?</strong></p>
+                        <br>
+                        <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompraFav"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompraFav"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                    </div>
+                    <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="alertAnyadirNuevoMenuFav">
+                        <p><strong>¿Desea añadir un nuevo menú favorito?</strong></p>
+                        <br>
+                        <button type="button" class="btn btn-success btn-sm" id="confirmarAnyadirMenú"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="denegarAnyadirMenú"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                    </div>
+                    <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
+                        <button type="button" class="btn btn-success btn-xs close" id="cerrarFavCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                        <p>Pedido Realizado</p>
+                        <strong>Resumen del Pedido:</strong>
+                        <ul>
+                            <li>Cerveza x 1</li>
+                        </ul>
+                        <strong>Precio: 1.50€</strong>
+                        <br>
+                    </div>
+                </div>
+                <!-- Fin Alerts -->
                 <div class="container" id="containerFav">
                     <!-- Menús creados por el usuario -->
                     <button type="button" class="btn btn-block btn-danger" id="menuFavIncorrecto">Noche de Martes</button>
@@ -433,51 +434,49 @@
         </div>
     </div>
 
-    <div class="container" id="paginaInicial">
+    <div class="container oculto" id="paginaInicial">
         <h1 class="text-center">Bienvenido</h1>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active text-center sliders container" id="sliderPedido">
-      <!-- <img src="img/bocadillo.jpg" alt="Los Angeles"> -->
-      <h4>¡Haz tu pedido ahora!</h4>
-      <p>Tu pedido en un solo click</p>
-    </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active text-center sliders container" id="sliderPedido">
+                    <!-- <img src="img/bocadillo.jpg" alt="Los Angeles"> -->
+                    <h4>¡Haz tu pedido ahora!</h4>
+                    <p>Tu pedido en un solo click</p>
+                </div>
 
-    <div class="item text-center sliders container">
-      <!-- <img src="img/sandwich.jpg" alt="Chicago"> -->
-      <h4>¡Conócenos!</h4>
-      <p>¿Quienes somos? Descúbrelo</p>
-    </div>
+                <div class="item text-center sliders container">
+                    <!-- <img src="img/sandwich.jpg" alt="Chicago"> -->
+                    <h4>¡Conócenos!</h4>
+                    <p>¿Quienes somos? Descúbrelo</p>
+                </div>
 
-    <div class="item text-center sliders container">
-      <!-- <img src="img/jamon.jpg" alt="New York"> -->
-      <h4>¡Echa un vistazo!</h4>
-      <p>Acede a nuestra Galeria</p>
-    </div>
-  </div>
+                <div class="item text-center sliders container">
+                    <!-- <img src="img/jamon.jpg" alt="New York"> -->
+                    <h4>¡Echa un vistazo!</h4>
+                    <p>Acede a nuestra Galeria</p>
+                </div>
+            </div>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right"></span>
     <span class="sr-only">Next</span>
   </a>
- </div>
-</div>
-
-  <i class="fas fa-reply volver fa-2x"></i>
+        </div>
+    </div>
 
 </body>
 

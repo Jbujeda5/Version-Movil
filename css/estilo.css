@@ -49,6 +49,10 @@ h2#tituloFavoritos {
     border-left: 7px dashed #000000;
 }
 
+.oculto{
+    display: none;
+}
+
 .optmenu {
     /* display: none; */
     margin-top: 5%;
@@ -129,8 +133,6 @@ td {
   color: white;
 }
 
-.menuEntrantes,
-.menuBocadillos,
 .seleccion{
     display: none;
 }
