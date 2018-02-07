@@ -80,7 +80,7 @@ $(function () {
         $('button#cerrarAlertReserva').removeAttr("disabled");
 
         $('#precio').text("Precio: "+precioFinal+"€");
-        $('#cantidad').text(cantidad);
+        $('#cantidad').text(cantidad+"x Bocadillo "+getParameterValue('item'));
     }
 
     function cerrarAlertReserva() {
@@ -228,8 +228,12 @@ $(function () {
         return results == null ? null : results[1];
     }
 
+    function getParameterValue(name) {
+        return getParameterValueFromURL(name,window.location.href)
+    }
+
     function currentDiv() {
-        return getParameterValueFromURL("div", window.location.href);
+        return getParameterValue("div");
     }
 
     function mostrarDiv(id) {
