@@ -3,7 +3,7 @@ $(function () {
     //
     //
     //    // Sliders
-    //    $('#sliderPedido').on('click', irZonaPedidos);
+       // $('#sliderPedido').on('click', mostrarDiv);
     //
     //    // Zona Inicial
     //    $('#codigoqr').on('click', ocultarQR);
@@ -12,9 +12,9 @@ $(function () {
     //    $('a#iraPedidos').on('click', irZonaPedidos);
     //
     //    // Zona Seleccion
-    //    $('#sel1').on('change', cambiarPrecio);
-    //    $('#anyadirReserva').on('click', mostrarAlertReserva);
-    //    $('#cerrarAlertReserva').on('click', cerrarAlertReserva);
+       $('#sel1').on('change', cambiarPrecio);
+       $('#anyadirReserva').on('click', mostrarAlertReserva);
+       $('#cerrarAlertReserva').on('click', cerrarAlertReserva);
     //
     //    // Zona Seleccion de menús
     //    $('#comida').on('click', moverComida);
@@ -25,27 +25,28 @@ $(function () {
     //    $('#risk').on('click', moverSeleccion);
     //
     //    // Zona Reservas
-    //    $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
-    //    $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
-    //    $('#botonDenegarCompra').on('click', cerrarAlertConfirmarCompra);
-    //    $('#cerrarCompraCorrecto').on('click', cerrarAlertConfirmarCompraReservada);
+       $('#confirmarCompra').on('click', mostrarAlertConfirmarCompra);
+       $('#botonConfirmarCompra').on('click', cerrarAlertConfirmarCompra);
+       $('#botonDenegarCompra').on('click', cerrarAlertConfirmarCompra);
+       $('#cerrarCompraCorrecto').on('click', cerrarAlertConfirmarCompraReservada);
     //    $('#tablaReserva').on('click', mostrarMensaje);
     //
     //    // Zona Favoritos Menús
-    //    $('#botonConfirmarCompraFav').on('click', confirmarAlertConfirmarCompraFav);
-    //    $('#botonDenegarCompraFav').on('click', cerrarAlertConfirmarCompraFav);
-    //    $('#menuFavIncorrecto').on('click', mostrarIncorrectoPedidoFav);
-    //    $('#cerrarFavCorrecto').on('click', cerrarCorrectoPedidoFav);
-    //    $('#cerrarFavIncorrecto').on('click', cerrarIncorrectoPedidoFav);
-    //    $('#menuFavCorrecto').on('click', mostrarAlertConfirmarCompraFav);
+       $('#botonConfirmarCompraFav').on('click', confirmarAlertConfirmarCompraFav);
+       $('#botonDenegarCompraFav').on('click', cerrarAlertConfirmarCompraFav);
+       $('#menuFavIncorrecto').on('click', mostrarIncorrectoPedidoFav);
+       $('#cerrarFavCorrecto').on('click', cerrarCorrectoPedidoFav);
+       $('#cerrarFavIncorrecto').on('click', cerrarIncorrectoPedidoFav);
+       $('#menuFavCorrecto').on('click', mostrarAlertConfirmarCompraFav);
     //
     //    // Zona Favoritos Añadir Menús
-    //    $('#anyadirFavButton').on('click', mostrarAlertAnyadirFav);
-    //    $('#confirmarAnyadirMenú').on('click', cerrarAlertAnyadirFav);
-    //    $('#denegarAnyadirMenú').on('click', cerrarAlertAnyadirFav);
+       $('#anyadirFavButton').on('click', mostrarAlertAnyadirFav);
+       $('#confirmarAnyadirMenú').on('click', cerrarAlertAnyadirFav);
+       $('#denegarAnyadirMenú').on('click', cerrarAlertAnyadirFav);
     //
     //    // Ocultando elementos
-    //    $(".alert").hide();
+       $(".alert").hide();
+       $('#textoSeleccion').val("3.50 €");
     //    $('div#menu').hide();
     //    $('div#zonaPedidos').hide();
     //    // $('div#menuEntrantes').hide();
@@ -59,26 +60,27 @@ $(function () {
     //
     //    // Zona de Seleccion Compra
     //
-    //    function cambiarPrecio() {
-    //        let precio = 3.50;
-    //        let cantidad = $('#sel1').val();
-    //        let precioFinal = precio * cantidad;
-    //
-    //        $('#textoSeleccion').val(precioFinal + " €");
-    //    }
-    //
-    //    function mostrarAlertReserva() {
-    //        $('#alertAnyadirReserva').slideDown();
-    //        $(".seleccion *").attr("disabled", "true");
-    //        $('button#cerrarAlertReserva').removeAttr("disabled");
-    //    }
-    //
-    //    function cerrarAlertReserva() {
-    //        $('#alertAnyadirReserva').slideUp();
-    //        $('.seleccion *').removeAttr('disabled');
-    //        $('.seleccion').hide(500);
-    //        $('#menu').show(500);
-    //    }
+
+       function cambiarPrecio() {
+           let precio = 3.50;
+           let cantidad = $('#sel1').val();
+           let precioFinal = precio * cantidad;
+
+           $('#textoSeleccion').val(precioFinal + " €");
+       }
+
+       function mostrarAlertReserva() {
+           $('#alertAnyadirReserva').slideDown();
+           $(".seleccion *").attr("disabled", "true");
+           $('button#cerrarAlertReserva').removeAttr("disabled");
+       }
+
+       function cerrarAlertReserva() {
+           $('#alertAnyadirReserva').slideUp();
+           $('.seleccion *').removeAttr('disabled');
+           $('.seleccion').hide(500);
+           $('#menu').show(500);
+       }
     //
     //    // Movilidad en menús
     //
@@ -133,76 +135,76 @@ $(function () {
     //        $('div#menu').show(500);
     //    }
     //
-    //    function cerrarAlertConfirmarCompraReservada() {
-    //        $('div#confirmarcompraRealizada').slideUp();
-    //        $('button#confirmarCompra').removeAttr("disabled");
-    //    }
+       function cerrarAlertConfirmarCompraReservada() {
+           $('div#confirmarcompraRealizada').slideUp();
+           $('button#confirmarCompra').removeAttr("disabled");
+       }
     //
-    //    function cerrarAlertAnyadirFav() {
-    //        $('div#alertAnyadirNuevoMenuFav').slideUp();
-    //        $("#containerFav").children().removeAttr("disabled");
-    //        $("div#anyadirFav").children().removeAttr("disabled");
-    //    }
+       function cerrarAlertAnyadirFav() {
+           $('div#alertAnyadirNuevoMenuFav').slideUp();
+           $("#containerFav").children().removeAttr("disabled");
+           $("div#anyadirFav").children().removeAttr("disabled");
+       }
+
+       function mostrarAlertAnyadirFav() {
+           $('div#alertAnyadirNuevoMenuFav').slideDown();
+           $("#containerFav").children().attr("disabled", "true");
+           $("div#anyadirFav").children().attr("disabled", "true");
+       }
     //
-    //    function mostrarAlertAnyadirFav() {
-    //        $('div#alertAnyadirNuevoMenuFav').slideDown();
-    //        $("#containerFav").children().attr("disabled", "true");
-    //        $("div#anyadirFav").children().attr("disabled", "true");
-    //    }
     //
+       function cerrarAlertConfirmarCompra() {
+           $('div#confirmarCompraAlert').slideUp();
+           $('div#confirmarcompraRealizada').slideDown();
+       }
     //
-    //    function cerrarAlertConfirmarCompra() {
-    //        $('div#confirmarCompraAlert').slideUp();
-    //        $('div#confirmarcompraRealizada').slideDown();
-    //    }
+       function confirmarAlertConfirmarCompraFav() {
+           $('div#confirmarCompraFavAlert').slideUp();
+           $("#containerFav").children().removeAttr("disabled");
+           $("div#anyadirFav").children().removeAttr("disabled");
+           mostrarCorrectoPedidoFav();
+       }
     //
-    //    function confirmarAlertConfirmarCompraFav() {
-    //        $('div#confirmarCompraFavAlert').slideUp();
-    //        $("#containerFav").children().removeAttr("disabled");
-    //        $("div#anyadirFav").children().removeAttr("disabled");
-    //        mostrarCorrectoPedidoFav();
-    //    }
+       function cerrarAlertConfirmarCompraFav() {
+           $('div#confirmarCompraFavAlert').slideUp();
+           $("#containerFav").children().removeAttr("disabled");
+           $("div#anyadirFav").children().removeAttr("disabled");
+       }
     //
-    //    function cerrarAlertConfirmarCompraFav() {
-    //        $('div#confirmarCompraFavAlert').slideUp();
-    //        $("#containerFav").children().removeAttr("disabled");
-    //        $("div#anyadirFav").children().removeAttr("disabled");
-    //    }
+       function cerrarIncorrectoPedidoFav() {
+           $("div#falloPedidoFav").slideUp();
+           $("#containerFav").children().removeAttr("disabled");
+           $("div#anyadirFav").children().removeAttr("disabled");
+       }
     //
-    //    function cerrarIncorrectoPedidoFav() {
-    //        $("div#falloPedidoFav").slideUp();
-    //        $("#containerFav").children().removeAttr("disabled");
-    //        $("div#anyadirFav").children().removeAttr("disabled");
-    //    }
+       function cerrarCorrectoPedidoFav() {
+           $("div#correctoPedidoFav").slideUp();
+           $("#containerFav").children().removeAttr("disabled");
+           $("div#anyadirFav").children().removeAttr("disabled");
+       }
     //
-    //    function cerrarCorrectoPedidoFav() {
-    //        $("div#correctoPedidoFav").slideUp();
-    //        $("#containerFav").children().removeAttr("disabled");
-    //        $("div#anyadirFav").children().removeAttr("disabled");
-    //    }
+       function mostrarCorrectoPedidoFav() {
+           $("div#correctoPedidoFav").slideDown();
+           $("#containerFav").children().attr("disabled", "true");
+           $("div#anyadirFav").children().attr("disabled", "true");
+       }
     //
-    //    function mostrarCorrectoPedidoFav() {
-    //        $("div#correctoPedidoFav").slideDown();
-    //        $("#containerFav").children().attr("disabled", "true");
-    //        $("div#anyadirFav").children().attr("disabled", "true");
-    //    }
+       function mostrarIncorrectoPedidoFav() {
+           $("div#falloPedidoFav").slideDown();
+           $("#containerFav").children().attr("disabled", "true");
+           $("div#anyadirFav").children().attr("disabled", "true");
+       }
     //
-    //    function mostrarIncorrectoPedidoFav() {
-    //        $("div#falloPedidoFav").slideDown();
-    //        $("#containerFav").children().attr("disabled", "true");
-    //        $("div#anyadirFav").children().attr("disabled", "true");
-    //    }
-    //
-    //    function mostrarAlertConfirmarCompra() {
-    //        $('div#confirmarCompraAlert').slideDown();
-    //        $('button#confirmarCompra').attr("disabled", "true");
-    //    }
-    //
-    //    function mostrarAlertConfirmarCompraFav() {
-    //        $('div#confirmarCompraFavAlert').slideDown();
-    //        $("#containerFav").children().attr("disabled", "true");
-    //        $("div#anyadirFav").children().attr("disabled", "true");
-    //    }
+       function mostrarAlertConfirmarCompra() {
+           $('div#confirmarCompraAlert').slideDown();
+           $('button#confirmarCompra').attr("disabled", "true");
+       }
+
+       function mostrarAlertConfirmarCompraFav() {
+           $('div#confirmarCompraFavAlert').slideDown();
+           $("#containerFav").children().attr("disabled", "true");
+           $("div#anyadirFav").children().attr("disabled", "true");
+       }
 
     function getParameterValueFromURL(name, url) {
         if (!url) url = location.href;
