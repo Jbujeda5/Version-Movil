@@ -76,7 +76,7 @@ $(function () {
 
     function mostrarAlertReserva() {
         $('#alertAnyadirReserva').slideDown();
-        $("#seleccioncomida *").attr("disabled", "true");
+        $(".seleccion *").attr("disabled", "true");
         $('button#cerrarAlertReserva').removeAttr("disabled");
 
         $('#precio').text("Precio: "+precioFinal+"€");
