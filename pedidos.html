@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicacion Movil del bar</title>
+
+    <link rel="icon" type="image/png" href="img/logo.png" />
+
+    <!--Enlace a la liberia de jQuery-->
+    <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
+    <!--Enlace a las funciones-->
+    <script src="js/codigo.js" type="text/javascript"></script>
+
+    <!--Codigo CDN para utilizar jQuery UI -->
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.min.js" type="text/javascript"></script>
+
+    <!--Codigos CDN de BootStrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!--Enlace a la hoja de estilos-->
+    <link rel="stylesheet" title="normal" href="css/estilo.css" type="text/css" media="screen" />
+
+    <!--Codigo CDN para utilizar Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" id="iconoBar" href="index.html">Bar</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html" id="iraInicio">Inicio <span class="sr-only">(current)</span></a></li>
+                    <li><a href="error.html">El bar</a></li>
+                    <li><a href="error.html">Agenda</a></li>
+                    <li><a href="error.html">Galeria</a></li>
+                    <li><a href="error.html">Contacto</a></li>
+                    <li class="active"><a href="pedidos.html?div=codigo" id="iraPedidos">Pedidos</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container" id="zonaPedidos">
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a class="letraTab" data-toggle="tab" href="#pedidos">Pedidos</a></li>
+            <li><a class="letraTab" data-toggle="tab" href="#reservas">Reservas</a></li>
+            <li><a class="letraTab" data-toggle="tab" href="#favoritos">Lo de siempre</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <!--Pestaña del tab donde se podra hacer el pedido de la mesa-->
+            <div id="pedidos" class="tab-pane fade in active">
+
+                <!--Div donde se leera el codigo QR de la mesa para poder hacer el pedido-->
+                <div class="oculto" id="codigo">
+                    <h4>Escanea el código de la mesa </h4>
+                    <a href="pedidos.html?div=menu"><img id="codigoqr" src="img/qr.jpg"></a>
+                </div>
+
+                <!--Div donde aparece lo que quieres seleccionar, como comida, bebida o algun juego-->
+                <div id="menu" class="oculto">
+                    <div id="comida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary" bg-primary>
+                        <p class="nav-tabs">Comida</p>
+                        <a href="pedidos.html?div=zonaComida"><img class="imgMenu" src="img/comida.png"></a>
+                    </div>
+
+                    <div id="bebida" class="optmenu col col-xs-offset-3 col-xs-6 bg-primary">
+                        <p class="nav-tabs">Bebida</p>
+                        <img class="imgMenu" src="img/bebida.png">
+                    </div>
+
+                    <div id="juegos" class="optmenu col col-xs-offset-3 col-xs-6  bg-primary">
+                        <p class="nav-tabs">Juegos</p>
+                        <a href="pedidos.html?div=zonaJuegos"><img class="imgMenu" src="img/juegos.png"></a>
+                    </div>
+                </div>
+
+                <!--Div donde se elegira entre entrantes, hamburguesas, bocadillos o sandwich-->
+                <div class="menuComida oculto" id="zonaComida">
+
+                    <h3>Comida</h3>
+
+                    <div class="row">
+                        <div class="col col-xs-6 bg-primary optComida">
+                            <p id="entrantes">Entrantes</p>
+                            <a href="pedidos.html?div=zonaEntrantes"><img class="imgMenuComida img-circle" src="img/entrante.jpg" alt="Entrantes"></a>
+                        </div>
+                        <div class="col col-xs-6 bg-primary optComida">
+                            <p id="hamburguesa">Hamburguesa</p>
+                            <img class="imgMenuComida img-circle" src="img/hamburguesa.jpg" alt="Hamburguesa">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="bg-primary col col-xs-6 optComida" id="irBocadillo">
+                            <p id="bocadillo">Bocadillo</p>
+                            <a href="pedidos.html?div=zonaBocadillos"><img class="imgMenuComida img-circle" src="img/bocadillo.jpg" alt="Bocadillo"></a>
+                        </div>
+                        <div class="bg-primary col col-xs-6 optComida">
+                            <p id="sandwich">Sandwich</p>
+                            <img class="imgMenuComida img-circle" src="img/sandwich.jpg" alt="Sandwich">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Div donde se elegira entre los diferentes entrantes-->
+                <div class="optComida oculto" id="zonaEntrantes">
+
+                    <h3>Nuestros Entrantes</h3>
+
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Boquerones</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <p>Bravas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Calamares</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <p>Sepia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Croquetas</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <p>Ibéricos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <p>Pulpo</p>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <p>Tabla Patés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Div donde se elegira entre los diferentes bocadillos-->
+                <div class="menuBocadillos oculto" id="zonaBocadillos">
+
+                    <h3>Nuestros Bocadillos</h3>
+
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body" id="bocadilloSerrano">
+                                <a href="pedidos.html?div=seleccioncomida&item=Serrano" class="enlaces" id="Serrano">
+                                    <h4 class="text-center">Serrano</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccioncomida&item=Chivito" class="enlaces">
+                                    <h4 class="text-center">Chivito</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccioncomida&item=Brascada" class="enlaces">
+                                    <h4 class="text-center">Brascada</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccioncomida&item=Tortilla" class="enlaces">
+                                    <h4 class="text-center">Tortilla</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccioncomida&item=Almussafes" class="enlaces">
+                                    <h4 class="text-center">Almussafes</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccioncomida&item=Vegetal" class="enlaces">
+                                    <h4 class="text-center">Vegetal</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Div donde aparece los detalles del producto elegido-->
+                <div class="oculto" id="seleccioncomida">
+                    <!-- Alerts de Seleccion -->
+                    <div class="alert alert-success alert-dismissible" role="alert" id="alertAnyadirReserva">
+
+                        <a class="btn btn-default btn-xs close" href="pedidos.html?div=menu" role="button" id="cerrarAlertReserva">
+                                <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+
+                        <p>Añadido a <strong>Reservas</strong></p>
+                        <ul>
+                            <li id="cantidad"></li>
+                            <li id="precio"></li>
+                        </ul>
+                        <br>
+                    </div>
+                    <!-- Fin Alerts de Selección -->
+                    <div class="row bg-primary optComida" id="descripcion">
+                        <div class="col-xs-12">
+                            <h4>Descripcion:</h4>
+                        </div>
+                        <div class="col-xs-12">
+                            <h4>Aqui ira la descripcion del producto: <br> -Ingrediente 1 <br> -Ingrediente 2 <br> -Ingrediente 3 </h4>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="form-group col-xs-offset-2 col-xs-3">
+                            <label for="sel1">Cantidad:</label>
+                            <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                        </div>
+
+                        <div class="form-group col-xs-5">
+                            <label for="textoSeleccion">Precio:</label>
+                            <input type="text" name="lname" id="textoSeleccion" class="form-control" disabled>
+                        </div>
+
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <button type="button" class="btn btn-success btn-lg col-xs-offset-1 col-xs-10" id="anyadirReserva">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Zona donde se muestran los distintos juegos -->
+                <div class="oculto" id="zonaJuegos">
+
+                    <h3>¿Jugamos?</h3>
+
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body" id="risk">
+                                <a href="pedidos.html?div=seleccionjuegos&item=Monopoli" class="enlaces">
+                                    <h4 class="text-center">Risk</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccionjuegos&item=Monopoli" class="enlaces">
+                                    <h4 class="text-center">Monopoli</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccionjuegos&item=Catán" class="enlaces">
+                                    <h4 class="text-center">Catán</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccionjuegos&item=Parchís" class="enlaces">
+                                    <h4 class="text-center">Parchís</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="bg-primary optComida col-xs-offset-1 col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccionjuegos&item=Dominó" class="enlaces">
+                                    <h4 class="text-center">Dominó</h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-primary optComida col-xs-5">
+                            <div class="panel-body">
+                                <a href="pedidos.html?div=seleccionjuegos&item=Munchkin" class="enlaces">
+                                    <h4 class="text-center">Munchkin</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="oculto" id="seleccionjuegos">
+                    <div class="row bg-primary optComida" id="descripcionjuego">
+                        <div class="col-xs-12">
+                            <h4>Descripcion:</h4>
+                        </div>
+                        <div class="col-xs-12">
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus necessitatibus, expedita cumque, quis eos hic voluptatibus consectetur nisi dolore, facere dolor repudiandae. Possimus quae, explicabo animi quam aliquid architecto illum. </h4>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="form-group col-xs-offset-3 col-xs-5">
+                            <label for="precioJuego">Precio:</label>
+                            <input type="text" name="lname" id="textoSeleccionjuego" class="form-control" disabled>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <button type="button" class="btn btn-success btn-lg col-xs-offset-1 col-xs-10" id="anyadirReservajuego">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Alerts de Seleccion -->
+                <div class="alert alert-success alert-dismissible" role="alert" id="alertAnyadirReservaJuego">
+
+                    <a class="btn btn-default btn-xs close" href="pedidos.html?div=menu" role="button" id="cerrarAlertReservaJuego">
+                                <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+
+                    <p>Añadido a <strong>Reservas</strong></p>
+                    <ul>
+                        <li id="juego"></li>
+                    </ul>
+                    <br>
+                </div>
+                <!-- Fin Alerts de Selección -->
+
+            </div>
+
+
+            <!-- Zona donde poder ver tus reservas -->
+            <div id="reservas" class="tab-pane fade">
+
+                <!-- Alerts de las reservas -->
+                <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="confirmarCompraAlert">
+                    <p><strong>¿Seguro que desea realizar la compra?</strong></p>
+                    <br>
+                    <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompra"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                    <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompra"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                </div>
+                <div class="alert alert-success alert-dismissible" role="alert" id="confirmarcompraRealizada">
+                    <button type="button" class="btn btn-success btn-xs close" id="cerrarCompraCorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                    <p>Pedido Realizado</p>
+                    <strong>Resumen del Pedido:</strong>
+                    <ul>
+                        <li>Bocadillo x 1</li>
+                    </ul>
+                    <strong>Precio: 3.50€</strong>
+                    <br>
+                </div>
+                <!-- Fin Alerts de las reservas -->
+                <!-- Tabla con los articulos guardados en el carrito -->
+                <div class="container">
+                    <table class="table-striped table-condensed table-responsive">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Cantidad</th>
+                                <th>Mesa</th>
+                                <th>Precio €</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaReserva">
+                            <tr>
+                                <td>1</td>
+                                <td>Bocadillo</td>
+                                <td>2</td>
+                                <td>10</td>
+                                <td>7</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total</td>
+                                <td>7</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Botones de Confirmar Compra -->
+                <div id="botonesReservas">
+                    <button type="button" id="confirmarCompra" class="btn btn-lg btn-success btn-responsive"><i class="fas fa-check"></i>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Apartado de pedidos favoritos -->
+            <div id="favoritos" class="tab-pane fade">
+                <!-- Alerts -->
+                <div class="alerts">
+                    <div class="alert alert-danger alert-dismissible" role="alert" id="falloPedidoFav">
+                        <button type="button" class="btn btn-danger btn-xs close" id="cerrarFavIncorrecto"><i class="glyphicon glyphicon-remove"></i></button>
+                        <p>No se puede realizar el pedido.</p>
+                        <strong>Motivos:</strong>
+                        <ul>
+                            <li>Faltan ingredientes</li>
+                            <li>Falta dinero en la cuenta</li>
+                        </ul>
+                    </div>
+                    <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="confirmarCompraFavAlert">
+                        <p><strong>¿Seguro que desea realizar la compra de "CERVEZA!!!"?</strong></p>
+                        <br>
+                        <button type="button" class="btn btn-success btn-sm" id="botonConfirmarCompraFav"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="botonDenegarCompraFav"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                    </div>
+                    <div class="alert confirmacionesAlerts col-xs-12" role="alert" id="alertAnyadirNuevoMenuFav">
+                        <p><strong>¿Desea añadir un nuevo menú favorito?</strong></p>
+                        <br>
+                        <button type="button" class="btn btn-success btn-sm" id="confirmarAnyadirMenú"><i class="glyphicon glyphicon-ok"></i>Confirmar</button>
+                        <button type="button" class="btn btn-danger btn-sm" id="denegarAnyadirMenú"><i class="glyphicon glyphicon-remove"></i>Cancelar</button>
+                    </div>
+                    <div class="alert alert-success alert-dismissible" role="alert" id="correctoPedidoFav">
+                        <button type="button" class="btn btn-success btn-xs close" id="cerrarFavCorrecto">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                        <p>Pedido Realizado</p>
+                        <strong>Resumen del Pedido:</strong>
+                        <ul>
+                            <li>Cerveza x 1</li>
+                        </ul>
+                        <strong>Precio: 1.50€</strong>
+                        <br>
+                    </div>
+                </div>
+                <!-- Fin Alerts -->
+                <div class="container" id="containerFav">
+                    <!-- Menús creados por el usuario -->
+                    <button type="button" class="btn btn-block btn-danger" id="menuFavIncorrecto">Noche de Martes</button>
+                    <button type="button" class="btn btn-block btn-success" id="menuFavCorrecto">CERVEZA!!!</button>
+
+                    <!-- Boton de añadir nuevos menús predefinidos -->
+                    <div class="container" id="anyadirFav">
+                        <button type="button" class="btn btn-circle btn-lg pull-right btn-dark" id="anyadirFavButton"><i class="glyphicon glyphicon-plus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
